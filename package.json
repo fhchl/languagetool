@@ -1,7 +1,7 @@
 {
   "name": "languagetool",
   "main": "./lib/languagetool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check spelling and grammar using LanguageTool",
   "keywords": [],
   "activationCommands": {
