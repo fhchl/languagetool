@@ -1,0 +1,39 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'LanguageTool: check all'
+      'command': 'languagetool:check'
+    },
+    {
+      'label': 'LanguageTool: show suggestions'
+      'command': 'languagetool:suggest'
+    },
+    {
+      'label': 'LanguageTool: clear'
+      'command': 'languagetool:clear'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'LanguageTool'
+      'submenu': [
+        {
+          'label': 'Check'
+          'command': 'languagetool:check'
+        },
+        {
+          'label': 'Clear'
+          'command': 'languagetool:clear'
+        },
+        {
+          'label': 'Suggest'
+          'command': 'languagetool:suggest'
+        }
+
+      ]
+    ]
+  }
+]
