@@ -20,4 +20,5 @@ This package only checks text when asked to do so.  Additionally, the linter pac
 - function to check only highlighted text
 - option for using local languagetool server
 - use different colors for different errors like the languagetool.org
-- show corrections when hovering over errors with mouse or curser
+- show corrections when hovering over errors with mouse or cursor
+- testing
