@@ -1,5 +1,5 @@
 request = require 'request'
-{CompositeDisposable,Range} = require 'atom'
+{CompositeDisposable, Range} = require 'atom'
 CorrectionsView = require './corrections-view'
 
 module.exports =
@@ -21,7 +21,7 @@ class LanguagetoolChecker
     error = @getError marker
 
     @correctionsView?.destroy()
-    @correctionsView = new CorrectionsView(@textEditor, error, suggestions, marker, @, @updateMisspellings)
+    @correctionsView = new CorrectionsView(@textEditor, error, suggestions, marker, this, @updateMisspellings)
 
   getError: (marker) ->
     match = @matchByMarker.get(marker)
@@ -34,7 +34,7 @@ class LanguagetoolChecker
       suggestions.push(replacement.value)
     return suggestions
 
-  updateMisspellings: =>
+  updateMisspellings: ->
     return
 
   initChecker: ->
@@ -68,7 +68,7 @@ class LanguagetoolChecker
         "motherTongue": atom.config.get("languagetool.motherTongue")
         "preferredVariants": atom.config.get("languagetool.preferredVariants")
 
-    request.post requestOptions, (err,resp, content) =>
+    request.post requestOptions, (err, resp, content) =>
       if err
         noteMsg = "LanguageTool: connection to API failed."
         erroptions =
