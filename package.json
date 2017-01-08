@@ -1,10 +1,9 @@
 {
   "name": "languagetool",
   "main": "./lib/languagetool",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Check spelling and grammar using LanguageTool",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "languagetool:check"
   },
@@ -32,7 +31,10 @@
     },
     "preferredVariants": {
       "type": "array",
-      "default": ["en-US", "de-DE"],
+      "default": [
+        "en-US",
+        "de-DE"
+      ],
       "description": "Comma-separated list of preferred language variants. The language detector used with language=auto can detect e.g. English, but it cannot decide whether British English or American English is used. Thus this parameter can be used to specify the preferred variants like en-GB and de-AT. Only available with language=auto.",
       "order": "3"
     }
