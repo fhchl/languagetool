@@ -30,7 +30,7 @@
     },
     "motherTongue": {
       "type": "string",
-      "default": "",
+      "default": "en-US",
       "description": "A language code of the user's native language, enabling false friends checks for some language pairs.",
       "order": "3"
     },
