@@ -17,17 +17,22 @@
     "atom-space-pen-views": "^2.0.0"
   },
   "configSchema": {
+    "localServer":{
+      "type": "boolean",
+      "default": "false",
+      "description": "If possible use a localServer. The default Setting is the online API",
+      "order": "1"
     "language": {
       "type": "string",
       "default": "auto",
       "description": "A language code like en or en-US, or auto to guess the language automatically (see Preferred Variants below). For languages with variants (English, German, Portuguese) spell checking will only be activated when you specify the variant, e.g. en-GB instead of just en.",
-      "order": "1"
+      "order": "2"
     },
     "motherTongue": {
       "type": "string",
       "default": "",
       "description": "A language code of the user's native language, enabling false friends checks for some language pairs.",
-      "order": "2"
+      "order": "3"
     },
     "preferredVariants": {
       "type": "array",
