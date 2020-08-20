@@ -1,5 +1,7 @@
 # LanguageTool package for Atom
 
+**NOTE: this plugin is unmaintained. Check out https://github.com/wysiib/linter-languagetool for an alternative.** 
+
 A package for spell and grammar checking with [LanguageTool](https://languagetool.org/). The content of the current buffer is checked using the [languagetool.org API](http://wiki.languagetool.org/public-http-api) only when asked to do so.
 
 ### Commands
