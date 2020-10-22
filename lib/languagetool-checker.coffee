@@ -46,6 +46,10 @@ class LanguagetoolChecker
     })
     @matchByMarker = new WeakMap
     @text = @textEditor.getText()
+	if atom.config.get("languagetool.localServer")
+      @url = "http://localhost:8081/v2/check"
+    else
+      @url = "https://languagetool.org/api/v2/check"
 
   destroy: ->
     @correctionsView?.destroy()
@@ -61,7 +65,7 @@ class LanguagetoolChecker
     @initChecker()
 
     requestOptions =
-      "url": "https://languagetool.org/api/v2/check"
+      "url": @url
       "form":
         "text": @text
         "language": atom.config.get("languagetool.language")
